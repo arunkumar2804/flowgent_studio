@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Websites & Smart Systems | Business Digital Consultancy</title>
+    <title>FlowGent Studio | Modern Digital Systems For Growing Businesses</title>
+    <meta name="description" content="FlowGent Studio helps businesses build premium websites, automate customer handling, manage bookings, and create connected digital systems that run smoother.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -387,151 +388,139 @@
             gap: 18px;
         }
 
-        .service-card {
-            padding: 28px;
+        .service-category {
+            padding: 32px;
             background: var(--bg);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
             transition: all 0.3s;
-            position: relative;
         }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: var(--accent);
-            transform: scaleY(0);
-            transition: transform 0.3s;
-            border-radius: 0 0 0 var(--radius-lg);
-        }
-
-        .service-card:hover {
+        .service-category:hover {
             border-color: #d1d5db;
             box-shadow: var(--shadow-md);
         }
 
-        .service-card:hover::before {
-            transform: scaleY(1);
-        }
-
-        .service-header {
+        .service-category-header {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 14px;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-subtle);
         }
 
-        .service-icon {
-            width: 38px;
-            height: 38px;
+        .service-category-icon {
+            width: 44px;
+            height: 44px;
             background: var(--bg-subtle);
-            border-radius: var(--radius-sm);
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .service-icon i { width: 17px; height: 17px; color: var(--text-secondary); }
+        .service-category-icon i { width: 20px; height: 20px; color: var(--text); }
 
-        .service-num {
-            font-size: 11px;
-            color: var(--text-tertiary);
-        }
-
-        .service-card h3 {
-            font-size: 16px;
-            font-weight: 550;
-            margin-bottom: 10px;
-        }
-
-        .service-card > p {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-            line-height: 1.6;
-        }
-
-        .service-outcome {
-            padding: 12px;
-            background: var(--bg-subtle);
-            border-radius: var(--radius-sm);
-        }
-
-        .service-outcome-label {
-            font-size: 10px;
+        .service-category h3 {
+            font-size: 18px;
             font-weight: 600;
-            color: var(--text-tertiary);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+        }
+
+        .service-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .service-item h4 {
+            font-size: 14px;
+            font-weight: 500;
             margin-bottom: 4px;
         }
 
-        .service-outcome p {
+        .service-item p {
             font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
         }
 
-        .workflow-steps {
+        .connected-flow {
             display: flex;
-            flex-direction: column;
-            gap: 0;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 40px 0;
         }
 
-        .workflow-item {
-            display: grid;
-            grid-template-columns: 140px 60px 1fr;
-            align-items: start;
-            padding: 32px 0;
-            border-bottom: 1px solid var(--border-subtle);
+        .connected-node {
+            padding: 16px 24px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            text-align: center;
+            transition: all 0.3s;
         }
 
-        .workflow-item:last-child { border-bottom: none; }
+        .connected-node:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
 
-        .workflow-num {
+        .connected-node i {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .connected-node span {
             font-size: 13px;
-            font-weight: 600;
+            font-weight: 500;
+        }
+
+        .connected-arrow {
             color: var(--text-tertiary);
         }
 
-        .workflow-dot {
-            display: flex;
-            justify-content: center;
+        .connected-arrow i { width: 16px; height: 16px; }
+
+        .ownership-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
         }
 
-        .workflow-dot-inner {
-            width: 14px;
-            height: 14px;
-            background: var(--accent);
+        .ownership-item {
+            text-align: center;
+            padding: 32px 20px;
+        }
+
+        .ownership-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--bg-muted);
             border-radius: 50%;
-            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
         }
 
-        .workflow-dot-inner::after {
-            content: '';
-            position: absolute;
-            top: 14px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 60px;
-            background: var(--border-subtle);
-        }
+        .ownership-icon i { width: 22px; height: 22px; color: var(--text); }
 
-        .workflow-item:last-child .workflow-dot-inner::after { display: none; }
-
-        .workflow-content h4 {
-            font-size: 16px;
-            font-weight: 550;
+        .ownership-item h4 {
+            font-size: 14px;
+            font-weight: 600;
             margin-bottom: 6px;
         }
 
-        .workflow-content p {
-            font-size: 14px;
+        .ownership-item p {
+            font-size: 13px;
             color: var(--text-secondary);
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         .industries-grid {
@@ -577,136 +566,6 @@
             line-height: 1.5;
         }
 
-        .packages-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .package-card {
-            padding: 32px;
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            transition: all 0.4s;
-            position: relative;
-        }
-
-        .package-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--accent);
-            transform: scaleX(0);
-            transition: transform 0.4s;
-        }
-
-        .package-card:hover {
-            border-color: #d1d5db;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .package-card:hover::before { transform: scaleX(1); }
-
-        .package-card.featured {
-            background: var(--accent);
-            border-color: var(--accent);
-        }
-
-        .package-card.featured::before {
-            background: white;
-        }
-
-        .package-level {
-            font-size: 10px;
-            font-weight: 600;
-            color: var(--text-tertiary);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 10px;
-        }
-
-        .package-card.featured .package-level {
-            color: rgba(255,255,255,0.5);
-        }
-
-        .package-name {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .package-card.featured .package-name { color: white; }
-
-        .package-for {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-        }
-
-        .package-card.featured .package-for { color: rgba(255,255,255,0.7); }
-
-        .package-helps {
-            margin-bottom: 20px;
-        }
-
-        .package-helps-label {
-            font-size: 10px;
-            font-weight: 600;
-            color: var(--text-tertiary);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 10px;
-        }
-
-        .package-card.featured .package-helps-label { color: rgba(255,255,255,0.5); }
-
-        .package-helps-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .package-helps-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 13px;
-        }
-
-        .package-helps-item i { width: 15px; height: 15px; color: var(--text-tertiary); }
-
-        .package-card.featured .package-helps-item i { color: rgba(255,255,255,0.6); }
-        .package-card.featured .package-helps-item { color: rgba(255,255,255,0.85); }
-
-        .package-result {
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-        }
-
-        .package-card.featured .package-result { border-top-color: rgba(255,255,255,0.15); }
-
-        .package-result-label {
-            font-size: 10px;
-            font-weight: 600;
-            color: var(--text-tertiary);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 4px;
-        }
-
-        .package-card.featured .package-result-label { color: rgba(255,255,255,0.5); }
-
-        .package-result p {
-            font-size: 13px;
-            font-weight: 500;
-        }
-
-        .package-card.featured .package-result p { color: white; }
-
         .comparison-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -728,7 +587,7 @@
         }
 
         .comparison-col.right::before {
-            content: '✓';
+            content: '';
             position: absolute;
             top: -10px;
             right: 24px;
@@ -853,6 +712,13 @@
             color: var(--text-secondary);
             line-height: 1.7;
             margin-bottom: 20px;
+        }
+
+        .footer-tagline {
+            font-size: 12px;
+            color: var(--text-tertiary);
+            font-weight: 500;
+            letter-spacing: 0.05em;
         }
 
         .footer-social {
@@ -1096,6 +962,13 @@
             line-height: 1.6;
         }
 
+        .multi-hint {
+            font-size: 12px;
+            color: var(--text-tertiary);
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
         .enquiry-options {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -1270,6 +1143,8 @@
         .summary-value {
             font-size: 13px;
             font-weight: 500;
+            text-align: right;
+            max-width: 60%;
         }
 
         .success-box {
@@ -1352,9 +1227,8 @@
             .problems-grid { grid-template-columns: repeat(2, 1fr); }
             .services-grid { grid-template-columns: 1fr; }
             .industries-grid { grid-template-columns: repeat(2, 1fr); }
-            .packages-grid { grid-template-columns: 1fr; }
             .comparison-grid { grid-template-columns: 1fr; }
-            .workflow-item { grid-template-columns: 100px 40px 1fr; }
+            .ownership-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
         }
 
@@ -1369,12 +1243,14 @@
             .hero-actions { flex-direction: column; }
             .btn-secondary { margin-left: 0; text-align: center; }
             .hero-stats { flex-wrap: wrap; gap: 24px; }
-            .problems-grid, .industries-grid { grid-template-columns: 1fr; }
+            .problems-grid, .industries-grid, .ownership-grid { grid-template-columns: 1fr; }
             .enquiry-options { grid-template-columns: 1fr; }
             .enquiry-q { font-size: 22px; }
             .progress-track { width: 100px; }
             .footer-grid { grid-template-columns: 1fr; gap: 40px; }
             .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+            .connected-flow { flex-direction: column; }
+            .connected-arrow { transform: rotate(90deg); }
         }
     </style>
 </head>
@@ -1385,7 +1261,6 @@
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#industries">Industries</a></li>
-                <li><a href="#packages">Packages</a></li>
                 <li><a href="#process">Process</a></li>
             </ul>
             <button class="nav-btn" onclick="openEnquiry()">Start Your Project</button>
@@ -1399,14 +1274,14 @@
                     <span class="label-dot"></span>
                     Available for new projects
                 </div>
-                <h1>Modern Websites & Smart Systems For Growing Businesses</h1>
-                <p class="hero-desc">I help businesses get more enquiries, manage customers better, and create a premium online experience that actually works for the business.</p>
+                <h1>Modern Digital Systems For Growing Businesses</h1>
+                <p class="hero-desc">We help businesses build premium online experiences, manage customers better, automate workflows, and grow through connected digital systems.</p>
                 <div class="hero-actions">
                     <button class="btn btn-primary" onclick="openEnquiry()">
                         Start Your Project <i data-lucide="arrow-right"></i>
                     </button>
                     <a href="#services" class="btn btn-secondary">
-                        See What I Do <i data-lucide="arrow-down-right"></i>
+                        Discuss Your Business <i data-lucide="arrow-down-right"></i>
                     </a>
                 </div>
                 <div class="hero-stats">
@@ -1427,43 +1302,50 @@
             <div class="hero-visual">
                 <div class="flow-card">
                     <div class="flow-header">
-                        <span class="flow-title">How Your Business Works</span>
-                        <span class="flow-badge">With System</span>
+                        <span class="flow-title">Your Business System</span>
+                        <span class="flow-badge">Connected</span>
                     </div>
                     <div class="flow-steps">
                         <div class="flow-item">
-                            <div class="flow-icon"><i data-lucide="search"></i></div>
+                            <div class="flow-icon"><i data-lucide="globe"></i></div>
                             <div class="flow-item-content">
-                                <h4>Customer Finds You</h4>
-                                <p>Through your premium website</p>
+                                <h4>Website</h4>
+                                <p>Premium presence that builds trust</p>
                             </div>
                         </div>
                         <div class="flow-item">
                             <div class="flow-icon"><i data-lucide="message-circle"></i></div>
                             <div class="flow-item-content">
-                                <h4>Sends Enquiry</h4>
-                                <p>Via WhatsApp or website form</p>
-                            </div>
-                        </div>
-                        <div class="flow-item">
-                            <div class="flow-icon"><i data-lucide="zap"></i></div>
-                            <div class="flow-item-content">
-                                <h4>Instant Response</h4>
-                                <p>Automated quick reply</p>
+                                <h4>WhatsApp</h4>
+                                <p>Instant customer communication</p>
                             </div>
                         </div>
                         <div class="flow-item">
                             <div class="flow-icon"><i data-lucide="calendar-check"></i></div>
                             <div class="flow-item-content">
-                                <h4>Easy Booking</h4>
-                                <p>Schedule without phone calls</p>
+                                <h4>Bookings / Orders</h4>
+                                <p>Seamless scheduling system</p>
                             </div>
                         </div>
                         <div class="flow-item">
                             <div class="flow-icon"><i data-lucide="layout-dashboard"></i></div>
                             <div class="flow-item-content">
-                                <h4>You Manage Everything</h4>
-                                <p>Simple dashboard to track</p>
+                                <h4>Dashboard</h4>
+                                <p>Manage everything in one place</p>
+                            </div>
+                        </div>
+                        <div class="flow-item">
+                            <div class="flow-icon"><i data-lucide="zap"></i></div>
+                            <div class="flow-item-content">
+                                <h4>Automations</h4>
+                                <p>Follow-ups and reminders</p>
+                            </div>
+                        </div>
+                        <div class="flow-item">
+                            <div class="flow-icon"><i data-lucide="repeat"></i></div>
+                            <div class="flow-item-content">
+                                <h4>Customer Follow-Up</h4>
+                                <p>Bring customers back automatically</p>
                             </div>
                         </div>
                     </div>
@@ -1476,13 +1358,13 @@
         <div class="section-inner">
             <div class="section-header">
                 <div class="section-label">The Problem</div>
-                <h2 class="section-title">Most Business Websites Don't Actually Help The Business</h2>
-                <p class="section-subtitle">Looking good isn't enough. Your website should work for your business.</p>
+                <h2 class="section-title">Most Businesses Struggle With Digital Operations</h2>
+                <p class="section-subtitle">Looking good online isn't enough. Your systems should actually help your business run smoother.</p>
             </div>
             <div class="problems-grid">
                 <div class="problem-card">
                     <div class="problem-icon"><i data-lucide="user-x"></i></div>
-                    <h3>Visitors Don't Enquire</h3>
+                    <h3>Not Enough Enquiries</h3>
                     <p>Your website looks nice but people leave without taking action.</p>
                 </div>
                 <div class="problem-card">
@@ -1492,7 +1374,7 @@
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon"><i data-lucide="clock"></i></div>
-                    <h3>Slow Responses</h3>
+                    <h3>Slow Customer Response</h3>
                     <p>Customers get tired of waiting and go to competitors.</p>
                 </div>
                 <div class="problem-card">
@@ -1507,7 +1389,7 @@
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon"><i data-lucide="repeat"></i></div>
-                    <h3>No Follow-Up</h3>
+                    <h3>No Follow-Up System</h3>
                     <p>Customers come once but never return because you can't stay in touch.</p>
                 </div>
             </div>
@@ -1517,260 +1399,275 @@
     <section id="services">
         <div class="section-inner">
             <div class="section-header">
-                <div class="section-label">What I Help With</div>
-                <h2 class="section-title">Digital Systems That Actually Help Your Business</h2>
-                <p class="section-subtitle">Not just websites — complete systems that make your business run smoother.</p>
+                <div class="section-label">What We Build</div>
+                <h2 class="section-title">Connected Digital Systems For Your Business</h2>
+                <p class="section-subtitle">Not just websites — complete ecosystems that help your business sell online, manage customers, and automate operations.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon"><i data-lucide="sparkles"></i></div>
-                        <span class="service-num">01</span>
+                <div class="service-category">
+                    <div class="service-category-header">
+                        <div class="service-category-icon"><i data-lucide="globe"></i></div>
+                        <h3>Web Development</h3>
                     </div>
-                    <h3>Premium Business Website</h3>
-                    <p>A modern website that builds trust and makes customers want to contact your business.</p>
-                    <div class="service-outcome">
-                        <div class="service-outcome-label">Result</div>
-                        <p>More enquiries from customers who feel confident about your business</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon"><i data-lucide="calendar-check"></i></div>
-                        <span class="service-num">02</span>
-                    </div>
-                    <h3>Customer Booking System</h3>
-                    <p>Let customers book appointments or services without calling you. Works 24/7.</p>
-                    <div class="service-outcome">
-                        <div class="service-outcome-label">Result</div>
-                        <p>Fewer phone calls, more bookings, less appointment confusion</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon"><i data-lucide="message-circle"></i></div>
-                        <span class="service-num">03</span>
-                    </div>
-                    <h3>WhatsApp Customer Handling</h3>
-                    <p>Automatically organize and respond to customer WhatsApp messages instantly.</p>
-                    <div class="service-outcome">
-                        <div class="service-outcome-label">Result</div>
-                        <p>Never miss a customer enquiry, even outside business hours</p>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <h4>Business Websites</h4>
+                            <p>Professional websites for restaurants, hotels, salons, clinics, and local businesses.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>E-Commerce Stores</h4>
+                            <p>Online stores with product pages, payments, cart systems, and order management.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Landing Pages</h4>
+                            <p>High-conversion pages for promotions, campaigns, and lead generation.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Admin Dashboards</h4>
+                            <p>Booking systems, invoice tools, and internal management systems.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Web Apps</h4>
+                            <p>Customer portals, appointment scheduling, and business management tools.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon"><i data-lucide="users"></i></div>
-                        <span class="service-num">04</span>
+                <div class="service-category">
+                    <div class="service-category-header">
+                        <div class="service-category-icon"><i data-lucide="smartphone"></i></div>
+                        <h3>App Development</h3>
                     </div>
-                    <h3>Customer Information System</h3>
-                    <p>Keep all customer details, history, and preferences organized in one place.</p>
-                    <div class="service-outcome">
-                        <div class="service-outcome-label">Result</div>
-                        <p>Know your customers better and provide personalized service</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon"><i data-lucide="mail"></i></div>
-                        <span class="service-num">05</span>
-                    </div>
-                    <h3>Smart Follow-Up System</h3>
-                    <p>Automatically stay in touch with customers after their visit or enquiry.</p>
-                    <div class="service-outcome">
-                        <div class="service-outcome-label">Result</div>
-                        <p>More repeat customers without you having to remember</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon"><i data-lucide="bar-chart-3"></i></div>
-                        <span class="service-num">06</span>
-                    </div>
-                    <h3>Business Dashboard</h3>
-                    <p>See your bookings, enquiries, and customer activity all in one simple view.</p>
-                    <div class="service-outcome">
-                        <div class="service-outcome-label">Result</div>
-                        <p>Understand your business at a glance, make better decisions</p>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <h4>Business Apps</h4>
+                            <p>Apps for inventory management, customer loyalty, staff handling, and scheduling.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Booking & Service Apps</h4>
+                            <p>Apps for salon appointments, deliveries, reservations, and customer bookings.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>E-Commerce Apps</h4>
+                            <p>Mobile shopping apps connected with your online store.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Utility Apps</h4>
+                            <p>Invoice generators, calculators, tracking systems, and business utilities.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-subtle" id="process">
-        <div class="section-inner">
-            <div class="section-header">
-                <div class="section-label">How It Works</div>
-                <h2 class="section-title">The Customer Journey With Your System</h2>
-                <p class="section-subtitle">Here's how customers move through your business when everything is connected.</p>
-            </div>
-            <div class="workflow-steps">
-                <div class="workflow-item">
-                    <div class="workflow-num">Step 1</div>
-                    <div class="workflow-dot"><div class="workflow-dot-inner"></div></div>
-                    <div class="workflow-content">
-                        <h4>Customer Discovers Your Business</h4>
-                        <p>They find your premium website or social media presence and feel confident about your quality.</p>
+                <div class="service-category">
+                    <div class="service-category-header">
+                        <div class="service-category-icon"><i data-lucide="zap"></i></div>
+                        <h3>Business Automation</h3>
+                    </div>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <h4>WhatsApp Automation</h4>
+                            <p>Automated replies, booking confirmations, reminders, and enquiry collection.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>AI Chatbot Integration</h4>
+                            <p>Smart customer support and enquiry handling systems.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Automated Workflows</h4>
+                            <p>Lead handling, invoice automation, CRM updates, and customer follow-up.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>CRM Integration</h4>
+                            <p>Connect customer conversations with business systems.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="workflow-item">
-                    <div class="workflow-num">Step 2</div>
-                    <div class="workflow-dot"><div class="workflow-dot-inner"></div></div>
-                    <div class="workflow-content">
-                        <h4>They Send An Enquiry</h4>
-                        <p>Through WhatsApp, website form, or any method they prefer — quick and easy.</p>
+                <div class="service-category">
+                    <div class="service-category-header">
+                        <div class="service-category-icon"><i data-lucide="trending-up"></i></div>
+                        <h3>Growth & Marketing</h3>
+                    </div>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <h4>SEO Setup & Optimization</h4>
+                            <p>Google indexing, keyword optimization, and technical setup.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Google & Meta Ads</h4>
+                            <p>Lead generation campaigns and conversion-focused advertising.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Email Marketing</h4>
+                            <p>Newsletters, automation flows, and customer retention systems.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Social Media Management</h4>
+                            <p>Content planning, post design, scheduling, and online presence.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="workflow-item">
-                    <div class="workflow-num">Step 3</div>
-                    <div class="workflow-dot"><div class="workflow-dot-inner"></div></div>
-                    <div class="workflow-content">
-                        <h4>You Receive Details Instantly</h4>
-                        <p>All customer information arrives in your dashboard organized and ready to handle.</p>
+                <div class="service-category">
+                    <div class="service-category-header">
+                        <div class="service-category-icon"><i data-lucide="palette"></i></div>
+                        <h3>Brand Identity</h3>
                     </div>
-                </div>
-                <div class="workflow-item">
-                    <div class="workflow-num">Step 4</div>
-                    <div class="workflow-dot"><div class="workflow-dot-inner"></div></div>
-                    <div class="workflow-content">
-                        <h4>Customer Gets Quick Response</h4>
-                        <p>Either automated or from you — but always fast, professional, and personalized.</p>
-                    </div>
-                </div>
-                <div class="workflow-item">
-                    <div class="workflow-num">Step 5</div>
-                    <div class="workflow-dot"><div class="workflow-dot-inner"></div></div>
-                    <div class="workflow-content">
-                        <h4>Booking Happens Smoothly</h4>
-                        <p>Customer schedules their appointment or service without any confusion or back-and-forth.</p>
-                    </div>
-                </div>
-                <div class="workflow-item">
-                    <div class="workflow-num">Step 6</div>
-                    <div class="workflow-dot"><div class="workflow-dot-inner"></div></div>
-                    <div class="workflow-content">
-                        <h4>System Follows Up Automatically</h4>
-                        <p>Reminders sent, thank you messages delivered, customers brought back next time.</p>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <h4>Logo Design</h4>
+                            <p>Modern minimal logo systems for your business.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Brand Guidelines</h4>
+                            <p>Typography, colors, visual consistency, and brand identity systems.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>Digital Brand Experience</h4>
+                            <p>Creating premium online perception across all platforms.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="industries">
+    <section class="bg-subtle" id="connected">
+        <div class="section-inner">
+            <div class="section-header" style="text-align: center;">
+                <div class="section-label">The Ecosystem</div>
+                <h2 class="section-title">Everything Connected</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">We create connected business ecosystems, not isolated websites. Here's how your business flows.</p>
+            </div>
+            <div class="connected-flow">
+                <div class="connected-node">
+                    <i data-lucide="globe"></i>
+                    <span>Website</span>
+                </div>
+                <div class="connected-arrow"><i data-lucide="arrow-right"></i></div>
+                <div class="connected-node">
+                    <i data-lucide="message-circle"></i>
+                    <span>WhatsApp</span>
+                </div>
+                <div class="connected-arrow"><i data-lucide="arrow-right"></i></div>
+                <div class="connected-node">
+                    <i data-lucide="calendar-check"></i>
+                    <span>Bookings</span>
+                </div>
+                <div class="connected-arrow"><i data-lucide="arrow-right"></i></div>
+                <div class="connected-node">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="connected-arrow"><i data-lucide="arrow-right"></i></div>
+                <div class="connected-node">
+                    <i data-lucide="zap"></i>
+                    <span>Automation</span>
+                </div>
+                <div class="connected-arrow"><i data-lucide="arrow-right"></i></div>
+                <div class="connected-node">
+                    <i data-lucide="repeat"></i>
+                    <span>Follow-Up</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ownership">
+        <div class="section-inner">
+            <div class="section-header" style="text-align: center;">
+                <div class="section-label">Your Ownership</div>
+                <h2 class="section-title">You Fully Own Your System</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">No locked platforms. No dependency traps. Built for long-term growth.</p>
+            </div>
+            <div class="ownership-grid">
+                <div class="ownership-item">
+                    <div class="ownership-icon"><i data-lucide="key"></i></div>
+                    <h4>Full Ownership</h4>
+                    <p>You keep full ownership of your website and all digital systems.</p>
+                </div>
+                <div class="ownership-item">
+                    <div class="ownership-icon"><i data-lucide="unlock"></i></div>
+                    <h4>No Locked Platforms</h4>
+                    <p>No monthly platform fees or vendor lock-in.</p>
+                </div>
+                <div class="ownership-item">
+                    <div class="ownership-icon"><i data-lucide="move"></i></div>
+                    <h4>Flexible Scalability</h4>
+                    <p>Systems that grow with your business needs.</p>
+                </div>
+                <div class="ownership-item">
+                    <div class="ownership-icon"><i data-lucide="shield"></i></div>
+                    <h4>Long-Term Growth</h4>
+                    <p>Built for sustainability, not just short-term fixes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-subtle" id="industries">
         <div class="section-inner">
             <div class="section-header">
-                <div class="section-label">Who I Help</div>
+                <div class="section-label">Industries</div>
                 <h2 class="section-title">Solutions For Your Business Type</h2>
-                <p class="section-subtitle">Every business has different needs. Here's how I help specific industries.</p>
+                <p class="section-subtitle">Every business has different needs. Here's how we help specific industries.</p>
             </div>
             <div class="industries-grid">
                 <div class="industry-card">
                     <div class="industry-icon"><i data-lucide="scissors"></i></div>
                     <h3>Salons & Spas</h3>
-                    <p>Handle bookings and customer enquiries without the phone call chaos.</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon"><i data-lucide="cake-slice"></i></div>
-                    <h3>Bakeries</h3>
-                    <p>Collect orders and special requests efficiently during busy hours.</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon"><i data-lucide="stethoscope"></i></div>
-                    <h3>Clinics</h3>
-                    <p>Reduce no-shows with automated reminders and easy rescheduling.</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon"><i data-lucide="coffee"></i></div>
-                    <h3>Cafés</h3>
-                    <p>Mobile ordering and loyalty programs for better customer experience.</p>
+                    <p>Handle bookings and enquiries without phone call chaos.</p>
                 </div>
                 <div class="industry-card">
                     <div class="industry-icon"><i data-lucide="utensils"></i></div>
                     <h3>Restaurants</h3>
-                    <p>Online reservations with confirmation to reduce no-shows.</p>
+                    <p>Online reservations and order management systems.</p>
                 </div>
                 <div class="industry-card">
                     <div class="industry-icon"><i data-lucide="building"></i></div>
                     <h3>Hotels & Resorts</h3>
-                    <p>Guest management that creates premium experiences from booking to checkout.</p>
+                    <p>Guest management for premium experiences.</p>
                 </div>
                 <div class="industry-card">
-                    <div class="industry-icon"><i data-lucide="dumbbell"></i></div>
-                    <h3>Fitness Studios</h3>
-                    <p>Class booking and membership management without confusion.</p>
+                    <div class="industry-icon"><i data-lucide="stethoscope"></i></div>
+                    <h3>Clinics</h3>
+                    <p>Reduce no-shows with automated reminders.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon"><i data-lucide="shopping-bag"></i></div>
+                    <h3>Retail Stores</h3>
+                    <p>Online store and inventory management.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon"><i data-lucide="coffee"></i></div>
+                    <h3>Cafés</h3>
+                    <p>Mobile ordering and customer loyalty programs.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon"><i data-lucide="cake-slice"></i></div>
+                    <h3>Bakeries</h3>
+                    <p>Order collection during busy hours.</p>
                 </div>
                 <div class="industry-card">
                     <div class="industry-icon"><i data-lucide="briefcase"></i></div>
-                    <h3>Professional Services</h3>
-                    <p>Client communication and follow-up that feels professional and organized.</p>
+                    <h3>Coaches & Consultants</h3>
+                    <p>Client booking and follow-up automation.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-subtle" id="packages">
-        <div class="section-inner">
-            <div class="section-header">
-                <div class="section-label">Solutions</div>
-                <h2 class="section-title">Choose Your Business System</h2>
-                <p class="section-subtitle">Each package is designed for different stages of business growth.</p>
-            </div>
-            <div class="packages-grid">
-                <div class="package-card">
-                    <div class="package-level">Stage 1</div>
-                    <h3 class="package-name">Launch Presence</h3>
-                    <p class="package-for">For businesses just starting with their online presence or needing an upgrade.</p>
-                    <div class="package-helps">
-                        <div class="package-helps-label">Helps With</div>
-                        <div class="package-helps-list">
-                            <div class="package-helps-item"><i data-lucide="check"></i><span>Looking outdated online</span></div>
-                            <div class="package-helps-item"><i data-lucide="check"></i><span>Not getting enquiries from website</span></div>
-                            <div class="package-helps-item"><i data-lucide="check"></i><span>Customers not trusting your business</span></div>
-                            <div class="package-helps-item"><i data-lucide="check"></i><span>Poor mobile experience</span></div>
-                        </div>
-                    </div>
-                    <div class="package-result">
-                        <div class="package-result-label">Result</div>
-                        <p>A premium website that builds trust and gets enquiries</p>
-                    </div>
+                <div class="industry-card">
+                    <div class="industry-icon"><i data-lucide="truck"></i></div>
+                    <h3>Ecommerce Brands</h3>
+                    <p>Complete online store and marketing systems.</p>
                 </div>
-                <div class="package-card featured">
-                    <div class="package-level">Stage 2</div>
-                    <h3 class="package-name">Customer Booking System</h3>
-                    <p class="package-for">For businesses managing bookings manually and missing customer enquiries.</p>
-                    <div class="package-helps">
-                        <div class="package-helps-label">Helps With</div>
-                        <div class="package-helps-list">
-                            <div class="package-helps-item"><i data-lucide="check"></i><span>Phone-call booking confusion</span></div>
-                            <div class="package-helps-item"><i data-lucide="check"></i><span>Missed customer enquiries</span></div>
-                            <div class="package-helps-item"><i data-lucide="check"></i><span>Slow response times</span></div>
-                            <div class="package-helps-item"><i data-lucide="check"></i><span>Manual appointment tracking</span></div>
-                        </div>
-                    </div>
-                    <div class="package-result">
-                        <div class="package-result-label">Result</div>
-                        <p>Smooth customer handling with automated responses</p>
-                    </div>
+                <div class="industry-card">
+                    <div class="industry-icon"><i data-lucide="heart-pulse"></i></div>
+                    <h3>Fitness Studios</h3>
+                    <p>Class booking and membership management.</p>
                 </div>
-                <div class="package-card">
-                    <div class="package-level">Stage 3</div>
-                    <h3 class="package-name">Business Management</h3>
-                    <p class="package-for">For growing businesses wanting complete control over customer operations.</p>
-                    <div class="package-helps">
-                        <div class="package-helps-label">Helps With</div>
-                        <div class="package-helps-list">
-                            <div class="package-helps-item"><i data-lucide="check"></i><span>Organizing customer details</span></div>
-                            <div class="package-helps-item"><i data-lucide="check"></i><span>Customer follow-up</span></div>
-                            <div class="package-helps-item"><i data-lucide="check"></i><span>Understanding business performance</span></div>
-                            <div class="package-helps-item"><i data-lucide="check"></i><span>Too much manual work</span></div>
-                        </div>
-                    </div>
-                    <div class="package-result">
-                        <div class="package-result-label">Result</div>
-                        <p>Complete system that runs smoothly with less effort</p>
-                    </div>
+                <div class="industry-card">
+                    <div class="industry-icon"><i data-lucide="home"></i></div>
+                    <h3>Hospitality</h3>
+                    <p>Service businesses with booking and customer flow.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon"><i data-lucide="sparkles"></i></div>
+                    <h3>Beauty Businesses</h3>
+                    <p>Premium presence and customer management.</p>
                 </div>
             </div>
         </div>
@@ -1780,30 +1677,28 @@
         <div class="section-inner">
             <div class="section-header">
                 <div class="section-label">The Difference</div>
-                <h2 class="section-title">Why This Is Different From Regular Web Developers</h2>
-                <p class="section-subtitle">Most developers just build pages. I build systems that help your business run better.</p>
+                <h2 class="section-title">Why FlowGent Studio Is Different</h2>
+                <p class="section-subtitle">Most developers build pages. We build connected business systems.</p>
             </div>
             <div class="comparison-grid">
                 <div class="comparison-col left">
-                    <div class="comparison-title">Regular Web Developers</div>
+                    <div class="comparison-title">Traditional Approach</div>
                     <div class="comparison-list">
                         <div class="comparison-item"><i data-lucide="x-circle"></i><span>Just create websites</span></div>
                         <div class="comparison-item"><i data-lucide="x-circle"></i><span>Use generic templates</span></div>
-                        <div class="comparison-item"><i data-lucide="x-circle"></i><span>Don't think about customer handling</span></div>
-                        <div class="comparison-item"><i data-lucide="x-circle"></i><span>No automation</span></div>
-                        <div class="comparison-item"><i data-lucide="x-circle"></i><span>No business flow thinking</span></div>
-                        <div class="comparison-item"><i data-lucide="x-circle"></i><span>Only care about how it looks</span></div>
+                        <div class="comparison-item"><i data-lucide="x-circle"></i><span>No customer system thinking</span></div>
+                        <div class="comparison-item"><i data-lucide="x-circle"></i><span>No automation included</span></div>
+                        <div class="comparison-item"><i data-lucide="x-circle"></i><span>Isolated solutions</span></div>
                     </div>
                 </div>
                 <div class="comparison-col right">
-                    <div class="comparison-title">This Approach</div>
+                    <div class="comparison-title">FlowGent Studio</div>
                     <div class="comparison-list">
-                        <div class="comparison-item"><i data-lucide="check-circle"></i><span>Build complete customer systems</span></div>
+                        <div class="comparison-item"><i data-lucide="check-circle"></i><span>Build complete business systems</span></div>
                         <div class="comparison-item"><i data-lucide="check-circle"></i><span>Custom-made for your business</span></div>
-                        <div class="comparison-item"><i data-lucide="check-circle"></i><span>Focus on getting more enquiries</span></div>
+                        <div class="comparison-item"><i data-lucide="check-circle"></i><span>Focus on customer flow</span></div>
                         <div class="comparison-item"><i data-lucide="check-circle"></i><span>Automation from the start</span></div>
-                        <div class="comparison-item"><i data-lucide="check-circle"></i><span>Think about how customers move through your business</span></div>
-                        <div class="comparison-item"><i data-lucide="check-circle"></i><span>Care about how it works, not just how it looks</span></div>
+                        <div class="comparison-item"><i data-lucide="check-circle"></i><span>Connected ecosystem</span></div>
                     </div>
                 </div>
             </div>
@@ -1813,7 +1708,7 @@
     <section class="cta-section">
         <div class="cta-inner">
             <h2>Your Business Deserves Systems That Actually Work</h2>
-            <p>Let's talk about how I can help your business get more customers, handle them better, and run smoother.</p>
+            <p>Let's talk about how we can help your business get more customers, handle them better, and run smoother with connected digital systems.</p>
             <button class="btn btn-primary" onclick="openEnquiry()">
                 Start Your Project <i data-lucide="arrow-right"></i>
             </button>
@@ -1823,12 +1718,12 @@
     <footer>
         <div class="footer-inner">
             <div class="footer-grid">
-                <!-- Brand Column -->
                 <div class="footer-brand">
                     <div class="footer-logo">
                         <img src="assets/img/flowgent_logo.svg" alt="FlowGent Studio">
                     </div>
-                    <p class="footer-desc">Helping businesses get more enquiries, manage customers better, and create premium online experiences that actually work.</p>
+                    <p class="footer-desc">Helping businesses build premium online experiences, manage customers better, automate operations, and grow through modern digital systems.</p>
+                    <p class="footer-tagline">Smooth Experiences</p>
                     <div class="footer-social">
                         <a href="https://instagram.com" target="_blank" aria-label="Instagram">
                             <i data-lucide="instagram"></i>
@@ -1845,31 +1740,28 @@
                     </div>
                 </div>
                 
-                <!-- Quick Links -->
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <div class="footer-links">
                         <a href="#services">Services</a>
                         <a href="#industries">Industries</a>
-                        <a href="#packages">Packages</a>
-                        <a href="#process">Process</a>
+                        <a href="#connected">Process</a>
+                        <a href="#ownership">Ownership</a>
                         <a href="#approach">Approach</a>
                     </div>
                 </div>
                 
-                <!-- Services -->
                 <div class="footer-col">
                     <h4>Services</h4>
                     <div class="footer-links">
-                        <a href="#services">Premium Websites</a>
-                        <a href="#services">Booking Systems</a>
-                        <a href="#services">WhatsApp Automation</a>
-                        <a href="#services">Customer Dashboards</a>
-                        <a href="#services">Follow-Up Systems</a>
+                        <a href="#services">Web Development</a>
+                        <a href="#services">App Development</a>
+                        <a href="#services">Automation</a>
+                        <a href="#services">Marketing</a>
+                        <a href="#services">Brand Identity</a>
                     </div>
                 </div>
                 
-                <!-- Contact -->
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <div class="footer-contact-item">
@@ -1887,85 +1779,109 @@
                 </div>
             </div>
             
-            <!-- Bottom Bar -->
             <div class="footer-bottom">
                 <div class="footer-bottom-left">
                     <p class="footer-copyright">© 2026 FlowGent Studio. All rights reserved.</p>
                     <p class="footer-owner">Designed & Developed by Arun Kumar</p>
                 </div>
                 <div class="footer-bottom-right">
-                    Built with purpose
+                    Smooth Experiences
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- ENQUIRY MODAL -->
     <div class="enquiry-modal" id="enquiryModal">
         <div class="enquiry-container">
             <div class="enquiry-header">
                 <div class="progress-wrap">
                     <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-                    <span class="progress-text" id="progressText">Step 1 of 9</span>
+                    <span class="progress-text" id="progressText">Step 1 of 8</span>
                 </div>
                 <button class="close-btn" onclick="closeEnquiry()"><i data-lucide="x"></i></button>
             </div>
             <div class="enquiry-body">
                 <div class="enquiry-step active" data-step="0">
                     <h2 class="enquiry-q" id="welcomeQ"></h2>
-                    <p class="enquiry-sub">This quick conversation helps me understand your business so I can suggest the right solution.</p>
+                    <p class="enquiry-sub">This quick conversation helps me understand your business so I can suggest the right connected solutions.</p>
                     <button class="start-btn" onclick="nextStep()">Start Conversation <i data-lucide="arrow-right"></i></button>
                 </div>
                 <div class="enquiry-step" data-step="1">
                     <h2 class="enquiry-q">What type of business do you run?</h2>
                     <div class="enquiry-options" id="opts1">
                         <button class="enquiry-opt" data-val="Salon"><i data-lucide="scissors"></i> Salon</button>
-                        <button class="enquiry-opt" data-val="Bakery"><i data-lucide="cake-slice"></i> Bakery</button>
-                        <button class="enquiry-opt" data-val="Café"><i data-lucide="coffee"></i> Café</button>
-                        <button class="enquiry-opt" data-val="Clinic"><i data-lucide="stethoscope"></i> Clinic</button>
                         <button class="enquiry-opt" data-val="Restaurant"><i data-lucide="utensils"></i> Restaurant</button>
-                        <button class="enquiry-opt" data-val="Other"><i data-lucide="building"></i> Other</button>
+                        <button class="enquiry-opt" data-val="Hotel"><i data-lucide="building"></i> Hotel</button>
+                        <button class="enquiry-opt" data-val="Clinic"><i data-lucide="stethoscope"></i> Clinic</button>
+                        <button class="enquiry-opt" data-val="Retail"><i data-lucide="shopping-bag"></i> Retail Store</button>
+                        <button class="enquiry-opt" data-val="Café"><i data-lucide="coffee"></i> Café</button>
+                        <button class="enquiry-opt" data-val="Ecommerce"><i data-lucide="truck"></i> Ecommerce Brand</button>
+                        <button class="enquiry-opt" data-val="Service"><i data-lucide="briefcase"></i> Service Business</button>
+                        <button class="enquiry-opt" data-val="Coaching"><i data-lucide="users"></i> Coaching</button>
+                        <button class="enquiry-opt" data-val="Other"><i data-lucide="sparkles"></i> Other</button>
                     </div>
                 </div>
                 <div class="enquiry-step" data-step="2">
-                    <h2 class="enquiry-q">What's the biggest challenge in handling customers right now?</h2>
+                    <h2 class="enquiry-q">What would help your business most right now?</h2>
+                    <p class="multi-hint">You can select multiple options</p>
                     <div class="enquiry-options" id="opts2">
-                        <button class="enquiry-opt" data-val="Not enough enquiries"><i data-lucide="user-x"></i> Not enough enquiries</button>
-                        <button class="enquiry-opt" data-val="Booking confusion"><i data-lucide="calendar"></i> Booking confusion</button>
-                        <button class="enquiry-opt" data-val="Manual work"><i data-lucide="clock"></i> Too much manual work</button>
-                        <button class="enquiry-opt" data-val="Outdated look"><i data-lucide="image"></i> Business looks outdated</button>
-                        <button class="enquiry-opt" data-val="No follow-up"><i data-lucide="repeat"></i> Can't follow up with customers</button>
-                        <button class="enquiry-opt" data-val="Everything"><i data-lucide="layers"></i> Everything needs improvement</button>
+                        <button class="enquiry-opt" data-val="Website"><i data-lucide="globe"></i> Website</button>
+                        <button class="enquiry-opt" data-val="Ecommerce Store"><i data-lucide="shopping-cart"></i> Ecommerce Store</button>
+                        <button class="enquiry-opt" data-val="Mobile App"><i data-lucide="smartphone"></i> Mobile App</button>
+                        <button class="enquiry-opt" data-val="Booking System"><i data-lucide="calendar-check"></i> Booking System</button>
+                        <button class="enquiry-opt" data-val="WhatsApp Automation"><i data-lucide="message-circle"></i> WhatsApp Automation</button>
+                        <button class="enquiry-opt" data-val="Customer Management"><i data-lucide="users"></i> Customer Management</button>
+                        <button class="enquiry-opt" data-val="Marketing System"><i data-lucide="trending-up"></i> Marketing System</button>
+                        <button class="enquiry-opt" data-val="Complete Business System"><i data-lucide="layers"></i> Complete Business System</button>
+                        <button class="enquiry-opt" data-val="SEO Setup"><i data-lucide="search"></i> SEO Setup</button>
+                        <button class="enquiry-opt" data-val="Brand Identity"><i data-lucide="palette"></i> Brand Identity</button>
+                        <button class="enquiry-opt" data-val="Social Media Management"><i data-lucide="instagram"></i> Social Media Management</button>
+                        <button class="enquiry-opt" data-val="AI Chatbot"><i data-lucide="bot"></i> AI Chatbot</button>
                     </div>
                 </div>
                 <div class="enquiry-step" data-step="3">
-                    <h2 class="enquiry-q">What would help your business most right now?</h2>
+                    <h2 class="enquiry-q">What is your biggest challenge right now?</h2>
+                    <p class="multi-hint">You can select multiple options</p>
                     <div class="enquiry-options" id="opts3">
-                        <button class="enquiry-opt" data-val="Better website"><i data-lucide="globe"></i> Better looking website</button>
-                        <button class="enquiry-opt" data-val="Booking system"><i data-lucide="calendar-check"></i> Easy booking system</button>
-                        <button class="enquiry-opt" data-val="WhatsApp automation"><i data-lucide="message-circle"></i> WhatsApp automation</button>
-                        <button class="enquiry-opt" data-val="Customer system"><i data-lucide="users"></i> Customer management</button>
-                        <button class="enquiry-opt" data-val="Complete system"><i data-lucide="layers"></i> Complete business system</button>
+                        <button class="enquiry-opt" data-val="Not enough enquiries"><i data-lucide="user-x"></i> Not enough enquiries</button>
+                        <button class="enquiry-opt" data-val="Manual booking handling"><i data-lucide="calendar"></i> Manual booking handling</button>
+                        <button class="enquiry-opt" data-val="Business looks outdated"><i data-lucide="image"></i> Business looks outdated</button>
+                        <button class="enquiry-opt" data-val="Managing customers manually"><i data-lucide="users"></i> Managing customers manually</button>
+                        <button class="enquiry-opt" data-val="No online sales system"><i data-lucide="credit-card"></i> No online sales system</button>
+                        <button class="enquiry-opt" data-val="Slow customer response"><i data-lucide="clock"></i> Slow customer response</button>
+                        <button class="enquiry-opt" data-val="No automation"><i data-lucide="zap"></i> No automation</button>
+                        <button class="enquiry-opt" data-val="Poor online visibility"><i data-lucide="eye-off"></i> Poor online visibility</button>
+                        <button class="enquiry-opt" data-val="No proper branding"><i data-lucide="palette"></i> No proper branding</button>
+                        <button class="enquiry-opt" data-val="Difficult customer follow-up"><i data-lucide="repeat"></i> Difficult customer follow-up</button>
                     </div>
                 </div>
                 <div class="enquiry-step" data-step="4">
                     <h2 class="enquiry-q">How do customers currently contact your business?</h2>
+                    <p class="multi-hint">You can select multiple options</p>
                     <div class="enquiry-options" id="opts4">
                         <button class="enquiry-opt" data-val="WhatsApp"><i data-lucide="message-circle"></i> WhatsApp</button>
-                        <button class="enquiry-opt" data-val="Phone"><i data-lucide="phone"></i> Phone calls</button>
                         <button class="enquiry-opt" data-val="Instagram"><i data-lucide="instagram"></i> Instagram</button>
+                        <button class="enquiry-opt" data-val="Phone Calls"><i data-lucide="phone"></i> Phone Calls</button>
                         <button class="enquiry-opt" data-val="Walk-ins"><i data-lucide="map-pin"></i> Walk-ins</button>
-                        <button class="enquiry-opt" data-val="Website"><i data-lucide="globe"></i> Existing website</button>
+                        <button class="enquiry-opt" data-val="Existing Website"><i data-lucide="globe"></i> Existing Website</button>
+                        <button class="enquiry-opt" data-val="Facebook"><i data-lucide="facebook"></i> Facebook</button>
+                        <button class="enquiry-opt" data-val="Google Maps"><i data-lucide="map"></i> Google Maps</button>
+                        <button class="enquiry-opt" data-val="Referrals"><i data-lucide="user-check"></i> Referrals</button>
                     </div>
                 </div>
                 <div class="enquiry-step" data-step="5">
-                    <h2 class="enquiry-q">How do you want customers to feel when visiting your business online?</h2>
+                    <h2 class="enquiry-q">What experience do you want customers to feel?</h2>
+                    <p class="multi-hint">You can select multiple options</p>
                     <div class="enquiry-options" id="opts5">
-                        <button class="enquiry-opt" data-val="Premium"><i data-lucide="gem"></i> Premium & Professional</button>
-                        <button class="enquiry-opt" data-val="Modern"><i data-lucide="zap"></i> Modern & Fresh</button>
-                        <button class="enquiry-opt" data-val="Trustworthy"><i data-lucide="shield"></i> Trustworthy & Reliable</button>
-                        <button class="enquiry-opt" data-val="Friendly"><i data-lucide="smile"></i> Friendly & Welcoming</button>
-                        <button class="enquiry-opt" data-val="Minimal"><i data-lucide="minus"></i> Clean & Minimal</button>
+                        <button class="enquiry-opt" data-val="Premium"><i data-lucide="gem"></i> Premium</button>
+                        <button class="enquiry-opt" data-val="Modern"><i data-lucide="zap"></i> Modern</button>
+                        <button class="enquiry-opt" data-val="Professional"><i data-lucide="briefcase"></i> Professional</button>
+                        <button class="enquiry-opt" data-val="Fast & Convenient"><i data-lucide="zap"></i> Fast & Convenient</button>
+                        <button class="enquiry-opt" data-val="Luxury"><i data-lucide="crown"></i> Luxury</button>
+                        <button class="enquiry-opt" data-val="Minimal"><i data-lucide="minus"></i> Minimal</button>
+                        <button class="enquiry-opt" data-val="Friendly"><i data-lucide="smile"></i> Friendly</button>
+                        <button class="enquiry-opt" data-val="Trustworthy"><i data-lucide="shield"></i> Trustworthy</button>
+                        <button class="enquiry-opt" data-val="Easy To Use"><i data-lucide="check-circle"></i> Easy To Use</button>
                     </div>
                 </div>
                 <div class="enquiry-step" data-step="6">
@@ -2016,7 +1932,6 @@
         </div>
     </div>
 
-    <!-- Error Toast -->
     <div class="error-toast" id="errorToast"></div>
 
     <script>
@@ -2025,11 +1940,13 @@
         const API_URL = 'https://script.google.com/macros/s/AKfycbzwn3oD2_HYN-uniR1gBkkrOIlpsDIT3teN9SxHEPWYHl0WliYPL8mFHRGCA5xpDc7u/exec';
         
         let step = 0, totalSteps = 12, answers = {};
+        const multiSelectSteps = [2, 3, 4, 5];
 
         function openEnquiry() {
             document.getElementById('enquiryModal').classList.add('active');
             document.body.style.overflow = 'hidden';
             step = 0;
+            answers = {};
             typewriterEffect("Let's understand your business.", 'welcomeQ');
             lucide.createIcons();
         }
@@ -2042,6 +1959,7 @@
 
         function resetForm() {
             step = 0;
+            answers = {};
             document.querySelectorAll('.enquiry-step').forEach(s => s.classList.remove('active', 'exit'));
             document.querySelector('.enquiry-step[data-step="0"]').classList.add('active');
             document.querySelectorAll('.enquiry-opt').forEach(o => o.classList.remove('selected'));
@@ -2051,7 +1969,7 @@
             document.getElementById('backBtn').classList.remove('visible');
             document.getElementById('backBtn').style.display = 'flex';
             document.getElementById('progressFill').style.width = '0%';
-            document.getElementById('progressText').textContent = 'Step 1 of 9';
+            document.getElementById('progressText').textContent = 'Step 1 of 8';
             document.getElementById('submitBtn').classList.remove('submitting');
             document.getElementById('submitBtn').disabled = false;
             document.getElementById('submitBtn').innerHTML = 'Submit Project Discovery <i data-lucide="arrow-right"></i>';
@@ -2061,7 +1979,7 @@
         function updateProgress() {
             const p = (step / (totalSteps - 1)) * 100;
             document.getElementById('progressFill').style.width = p + '%';
-            document.getElementById('progressText').textContent = `Step ${Math.min(step, 9)} of 9`;
+            document.getElementById('progressText').textContent = `Step ${Math.min(step, 8)} of 8`;
         }
 
         function showStep(s) {
@@ -2069,7 +1987,7 @@
             const target = document.querySelector(`.enquiry-step[data-step="${s}"]`);
             if (target) target.classList.add('active');
             updateProgress();
-            document.getElementById('backBtn').classList.toggle('visible', s > 1 && s < 12);
+            document.getElementById('backBtn').classList.toggle('visible', s > 0 && s < 12);
 
             if (s === 6) {
                 setTimeout(() => typewriterEffect("Great. I understand your business now.", 'transQ1'), 300);
@@ -2094,7 +2012,9 @@
                 if (cur) cur.classList.add('exit');
                 step++;
                 showStep(step);
-                document.getElementById('nextBtn').disabled = step >= 7 && step <= 10;
+                const isInputStep = step >= 7 && step <= 10;
+                document.getElementById('nextBtn').disabled = isInputStep;
+                document.getElementById('nextBtn').innerHTML = 'Continue <i data-lucide="arrow-right"></i>';
                 lucide.createIcons();
             }
         }
@@ -2105,7 +2025,8 @@
                 if (cur) cur.classList.add('exit');
                 step--;
                 showStep(step);
-                document.getElementById('nextBtn').disabled = step >= 7 && step <= 10;
+                const isInputStep = step >= 7 && step <= 10;
+                document.getElementById('nextBtn').disabled = isInputStep;
                 lucide.createIcons();
             }
         }
@@ -2140,21 +2061,43 @@
             type();
         }
 
-        function selectOpt(group, val) {
-            answers['q' + group] = val;
-            document.querySelectorAll(`#opts${group} .enquiry-opt`).forEach(o => {
-                o.classList.toggle('selected', o.dataset.val === val);
-            });
-            document.getElementById('nextBtn').disabled = false;
+        function selectOpt(group, val, isMulti) {
+            if (isMulti) {
+                if (!answers['q' + group]) answers['q' + group] = [];
+                const arr = answers['q' + group];
+                const idx = arr.indexOf(val);
+                if (idx > -1) {
+                    arr.splice(idx, 1);
+                } else {
+                    arr.push(val);
+                }
+                document.querySelectorAll(`#opts${group} .enquiry-opt`).forEach(o => {
+                    o.classList.toggle('selected', arr.includes(o.dataset.val));
+                });
+                document.getElementById('nextBtn').disabled = arr.length === 0;
+                document.getElementById('nextBtn').innerHTML = arr.length > 0 ? `Continue (${arr.length} selected) <i data-lucide="arrow-right"></i>` : 'Select at least one';
+            } else {
+                answers['q' + group] = val;
+                document.querySelectorAll(`#opts${group} .enquiry-opt`).forEach(o => {
+                    o.classList.toggle('selected', o.dataset.val === val);
+                });
+                document.getElementById('nextBtn').disabled = false;
+            }
+            lucide.createIcons();
+        }
+
+        function formatMultiSelect(arr) {
+            if (!arr || !arr.length) return '—';
+            return arr.join(', ');
         }
 
         function buildSummary() {
             document.getElementById('sumCard').innerHTML = `
-                <div class="summary-row"><span class="summary-label">Business</span><span class="summary-value">${answers.q1 || '—'}</span></div>
-                <div class="summary-row"><span class="summary-label">Challenge</span><span class="summary-value">${answers.q2 || '—'}</span></div>
-                <div class="summary-row"><span class="summary-label">Needs</span><span class="summary-value">${answers.q3 || '—'}</span></div>
-                <div class="summary-row"><span class="summary-label">Contact</span><span class="summary-value">${answers.q4 || '—'}</span></div>
-                <div class="summary-row"><span class="summary-label">Experience</span><span class="summary-value">${answers.q5 || '—'}</span></div>
+                <div class="summary-row"><span class="summary-label">Business Type</span><span class="summary-value">${answers.q1 || '—'}</span></div>
+                <div class="summary-row"><span class="summary-label">Services Needed</span><span class="summary-value">${formatMultiSelect(answers.q2)}</span></div>
+                <div class="summary-row"><span class="summary-label">Current Challenges</span><span class="summary-value">${formatMultiSelect(answers.q3)}</span></div>
+                <div class="summary-row"><span class="summary-label">Contact Methods</span><span class="summary-value">${formatMultiSelect(answers.q4)}</span></div>
+                <div class="summary-row"><span class="summary-label">Desired Experience</span><span class="summary-value">${formatMultiSelect(answers.q5)}</span></div>
                 <div class="summary-row"><span class="summary-label">Name</span><span class="summary-value">${answers.name || '—'}</span></div>
                 <div class="summary-row"><span class="summary-label">Email</span><span class="summary-value">${answers.email || '—'}</span></div>
             `;
@@ -2171,7 +2114,6 @@
             const phone = document.getElementById('inpPhone').value.trim();
             const email = document.getElementById('inpEmail').value.trim();
 
-            // Validate
             if (!name) {
                 document.getElementById('inpName').classList.add('error');
                 showError('Please enter your name');
@@ -2201,6 +2143,11 @@
             answers.business = business;
             answers.phone = phone;
             answers.email = email;
+            answers.q1 = answers.q1 || '';
+            answers.q2 = formatMultiSelect(answers.q2);
+            answers.q3 = formatMultiSelect(answers.q3);
+            answers.q4 = formatMultiSelect(answers.q4);
+            answers.q5 = formatMultiSelect(answers.q5);
             answers.submittedAt = new Date().toISOString();
 
             try {
@@ -2224,12 +2171,12 @@
             }
         }
 
-        // Wire up options
         for (let i = 1; i <= 5; i++) {
             const container = document.getElementById(`opts${i}`);
             if (container) {
+                const isMulti = multiSelectSteps.includes(i);
                 container.querySelectorAll('.enquiry-opt').forEach(opt => {
-                    opt.addEventListener('click', () => selectOpt(i, opt.dataset.val));
+                    opt.addEventListener('click', () => selectOpt(i, opt.dataset.val, isMulti));
                 });
             }
         }
@@ -2253,7 +2200,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.section-header, .problem-card, .service-card, .industry-card, .package-card, .comparison-col').forEach(el => {
+        document.querySelectorAll('.section-header, .problem-card, .service-category, .industry-card, .comparison-col, .ownership-item, .connected-node').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(25px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
