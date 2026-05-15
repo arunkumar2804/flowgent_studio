@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlowGent Studio | Modern Digital Systems For Growing Businesses</title>
     <meta name="description" content="FlowGent Studio helps businesses build premium websites, automate customer handling, manage bookings, and create connected digital systems that run smoother.">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
     <link rel="icon" type="image/svg+xml" href="assets/img/flowgent_favicon.svg">
+    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -108,11 +110,11 @@
             width: auto;
         }
 
-        .nav-logo img.dark-logo { display: block; }
-        .nav-logo img.light-logo { display: none; }
+        .nav-logo img.logo-light { display: block; }
+        .nav-logo img.logo-dark { display: none; }
 
-        [data-theme="dark"] .nav-logo img.dark-logo { display: none; }
-        [data-theme="dark"] .nav-logo img.light-logo { display: block; }
+        [data-theme="dark"] .nav-logo img.logo-light { display: none; }
+        [data-theme="dark"] .nav-logo img.logo-dark { display: block; }
 
         .nav-links {
             display: flex;
@@ -789,11 +791,11 @@
             width: auto;
         }
 
-        .footer-logo img.dark-logo { display: block; }
-        .footer-logo img.light-logo { display: none; }
+        .footer-logo img.logo-light { display: block; }
+        .footer-logo img.logo-dark { display: none; }
 
-        [data-theme="dark"] .footer-logo img.dark-logo { display: none; }
-        [data-theme="dark"] .footer-logo img.light-logo { display: block; }
+        [data-theme="dark"] .footer-logo img.logo-light { display: none; }
+        [data-theme="dark"] .footer-logo img.logo-dark { display: block; }
 
         .footer-desc {
             font-size: 14px;
@@ -1087,11 +1089,11 @@
         .enquiry-opt.selected {
             background: var(--accent);
             border-color: var(--accent);
-            color: white;
+            color: var(--bg);
         }
 
         .enquiry-opt i { width: 16px; height: 16px; opacity: 0.5; color: var(--text-secondary); }
-        .enquiry-opt.selected i { opacity: 1; color: white; }
+        .enquiry-opt.selected i { opacity: 1; color: var(--bg); }
 
         .enquiry-input-wrap {
             display: flex;
@@ -1280,8 +1282,8 @@
             transform: translate(-50%, -50%);
             width: 18px;
             height: 18px;
-            border: 2px solid rgba(255,255,255,0.3);
-            border-top-color: white;
+            border: 2px solid var(--border);
+            border-top-color: var(--accent);
             border-radius: 50%;
             animation: spin 0.7s linear infinite;
         }
@@ -1343,13 +1345,23 @@
             .nav-right { gap: 8px; }
         }
     </style>
+    <script>
+        (function() {
+            const stored = localStorage.getItem('theme');
+            if (stored) {
+                document.documentElement.setAttribute('data-theme', stored);
+            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 <body>
     <nav class="nav">
         <div class="nav-inner">
             <div class="nav-logo">
-                <img src="assets/img/flowgent_logo.svg" alt="FlowGent Studio" class="dark-logo">
-                <img src="assets/img/flowgent_logo_light.svg" alt="FlowGent Studio" class="light-logo">
+                <img src="assets/Logo/flowgent_logo_no_background_SVG/logo-for-white-background.svg" alt="FlowGent Studio" class="logo-light">
+                <img src="assets/Logo/flowgent_logo_no_background_SVG/logo-for-dark-background.svg" alt="FlowGent Studio" class="logo-dark">
             </div>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
@@ -1819,8 +1831,8 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="assets/img/flowgent_logo.svg" alt="FlowGent Studio" class="dark-logo">
-                        <img src="assets/img/flowgent_logo_light.svg" alt="FlowGent Studio" class="light-logo">
+                        <img src="assets/Logo/flowgent_logo_no_background_SVG/logo-for-white-background.svg" alt="FlowGent Studio" class="logo-light">
+                        <img src="assets/Logo/flowgent_logo_no_background_SVG/logo-for-dark-background.svg" alt="FlowGent Studio" class="logo-dark">
                     </div>
                     <p class="footer-desc">Helping businesses build premium online experiences, manage customers better, automate operations, and grow through modern digital systems.</p>
                     <p class="footer-tagline">Smooth Experiences</p>
