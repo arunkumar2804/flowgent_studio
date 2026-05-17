@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-maroon: #3e0c15;
+  --color-champagne: #d4af37;
+  --color-ivory: #faf5f0;
+  --color-beige: #e8dbce;
+  --color-softblack: #0f0f0f;
+  --color-bronze: #b38c5b;
+
+  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-outfit);
+  --font-cursive: var(--font-great-vibes);
+}
+
+:root {
+  --background: #0f0f0f;
+  --foreground: #faf5f0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cinematic-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 15, 15, 0) 0%,
+    rgba(15, 15, 15, 0.8) 50%,
+    rgba(15, 15, 15, 1) 100%
+  );
+}
+
+.gold-glow {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.placeholder-glow {
+  background: linear-gradient(
+    45deg,
+    rgba(212, 175, 55, 0.05) 0%,
+    rgba(212, 175, 55, 0.1) 50%,
+    rgba(212, 175, 55, 0.05) 100%
+  );
+  background-size: 200% 200%;
+  animation: placeholderShimmer 3s ease-in-out infinite;
+}
+
+@keyframes placeholderShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
